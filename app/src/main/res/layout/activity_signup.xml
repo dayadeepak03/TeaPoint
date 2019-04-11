@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/containerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/container_layout_margin">
+
+            <TextView
+                android:id="@+id/signup_title"
+                style="@style/LabelStyle"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="@string/signup_title"
+                android:textColor="@color/orange" />
+
+            <TextView
+                android:id="@+id/signup_welcome_msg"
+                style="@style/LabelStyle"
+                android:layout_below="@id/signup_title"
+                android:layout_marginTop="16dp"
+                android:text="@string/signup_welcome_txt" />
+
+
+            <EditText
+                android:id="@+id/et_email_address"
+                style="@style/EditTextStyle"
+                android:layout_below="@id/signup_welcome_msg"
+                android:layout_marginTop="16dp"
+                android:hint="@string/email_address_hint"
+                android:drawableLeft="@drawable/ic_action_email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/et_mobile_number"
+                style="@style/EditTextStyle"
+                android:layout_below="@id/et_email_address"
+                android:layout_marginTop="16dp"
+                android:hint="@string/mobile_number_hint"
+                android:drawableLeft="@drawable/ic_action_phone"
+                android:inputType="text|number" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/EditTextStyle"
+                android:layout_below="@id/et_mobile_number"
+                android:layout_marginTop="16dp"
+                android:hint="@string/password_hint"
+                android:drawableLeft="@drawable/ic_action_pass"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/et_confirm_password"
+                style="@style/EditTextStyle"
+                android:layout_below="@id/et_password"
+                android:layout_marginTop="16dp"
+                android:hint="@string/confirm_password_hint"
+                android:drawableLeft="@drawable/ic_action_confirm"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btn_signup"
+                style="@style/SolidButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_below="@id/et_confirm_password"
+                android:layout_marginTop="20dp"
+                android:text="@string/signup_btn_label" />
+
+            <RelativeLayout
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_signup"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/have_account"
+                    style="@style/LabelStyle"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/have_account"
+                    android:textColor="@color/account"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/login"
+                    style="@style/LabelStyle"
+                    android:layout_toEndOf="@id/have_account"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:onClick="login"
+                    android:text="@string/login_label"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
